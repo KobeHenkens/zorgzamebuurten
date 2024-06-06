@@ -1,0 +1,212 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Roboto', 'sans-serif';
+  --primary: #EEB38C;
+  --secundary: #000000;
+  --bg: #ffffff;
+}
+
+/* Helpers */
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.skiplink {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  color: var(--primary);
+}
+
+.skiplink:focus {
+  position:static;
+  width:auto;
+  height:auto;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 0.1rem dotted var(--primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Navbar */
+
+nav.content {
+  display: flex;
+  height: 3.125rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.container.navbarshadow {
+  max-width: 200rem;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5) ;
+}
+nav.content img {
+  height: 3rem;
+}
+nav.content .logo, nav.content .hamburger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.content ul {
+  width: 100%;
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+nav.content ul a {
+  text-decoration: none;
+  color: var(--secundary);
+  margin-left: 2.1875rem;
+}
+nav.content ul.hidden {
+  display: hidden;
+  height: 90vh;
+  animation: slideOutMenu 1s ease;
+}
+nav.content ul.visible {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  height: 90vh;
+  background-color: #ffffff;
+  animation: slideInMenu 1s ease;
+}
+nav.content li {
+  position: relative;
+  padding: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid #DFDCDC;
+}
+nav.content li:hover {
+  background-color: #DFDCDC;
+  border-radius: 1rem;
+}
+nav.content li a::before {
+  position: absolute;
+  left: 0.625rem;
+  top: 50%;
+  transform: translateY(-50%); /* Centreer verticaal */
+  width: 2.1875rem; /* Pas de grootte van het icoon aan */
+  height: 2.1875rem; /* Pas de grootte van het icoon aan */
+}
+nav.content li:nth-child(1) a::before {
+  content: "";
+  background: url(./images/home.png) no-repeat center center;
+  background-size: contain;
+}
+nav.content li:nth-child(2) a::before {
+  content: "";
+  background: url(./images/posts.png) no-repeat center center;
+  background-size: contain;
+  position: absolute;
+}
+nav.content li:nth-child(3) a::before {
+  content: "";
+  background: url(./images/contact.png) no-repeat center center;
+  background-size: contain;
+  position: absolute;
+}
+nav.content ul .last-items {
+  margin-top: auto;
+}
+nav.content li:nth-child(4) a::before {
+  content: "";
+  background: url(./images/login.png) no-repeat center center;
+  background-size: contain;
+  position: absolute;
+}
+nav.content li:nth-child(5) a::before {
+  content: "";
+  background: url(./images/registreer.png) no-repeat center center;
+  background-size: contain;
+  position: absolute;
+}
+
+
+.hamburger {
+  border: none;
+  background-color: var(--bg);
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hamburger .icon span {
+  display: block;
+  width: 1.875rem;
+  height: 0.25rem;
+  background-color: var(--primary);
+  margin: 0.3125rem 0;
+  transition: transform 0.4s ease;
+}
+
+.hamburger[aria-expanded=true] .icon span:nth-child(1) {
+  transform: translateY(0.5rem) rotate(45deg);
+}
+
+.hamburger[aria-expanded=true] .icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger[aria-expanded=true] .icon span:nth-child(3) {
+  transform: translateY(-0.5625rem) rotate(-45deg);
+  background-color
+  : var(--primary);
+}
+
+
+
+
+
+/* Media queries */
+
+/* Animaties */
+@keyframes slideInMenu {
+  0% {
+
+    transform: translateX(-100%)
+
+  }
+  100% {
+
+    transform: translateX(0);
+  }
+}
+@keyframes slideOutMenu {
+  0% {
+    transform: translateX(0);
+    display: flex;
+    flex-direction: column;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+  }
+}
