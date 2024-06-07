@@ -1,0 +1,93 @@
+/* Hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    margin-bottom: 4rem;
+  }
+  .hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero .content h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  .hero .content p {
+    margin-bottom: 1.5rem;
+  }
+  .hero .content a {
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: var(--primary);
+    border-radius: 0.625rem;
+    padding: 0.5rem 3rem;
+    color: var(--secundary);
+  }
+  .hero figure {
+    margin: 1rem 0 0;
+    order: -1;
+  }
+  .hero figure img {
+    object-fit: cover;
+    aspect-ratio: 8/5;
+    max-width: 100%;
+  }
+  
+  /* About */
+  .about {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  .about .content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .about .content p {
+    margin: 0;
+  }
+  .about figure {
+    order: -1;
+  }
+  .about figure img {
+    object-fit: cover;
+    max-width: 100%;
+  }
+  
+  /* vragen */
+  
+  .vragen {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    height: 8rem;
+    text-align: center;
+  }
+  .vragen h2 {
+    margin-bottom: 1.5rem;
+  }
+  .vragen a {
+    margin-top: 4rem;
+    text-decoration: none;
+    color: var(--secundary);
+    border: 1px solid var(--secundary);
+    padding: 0.5rem 3rem;
+    border-radius: 0.625rem;
+  }
+  
+  /* info */
+  
+  .info {
+    padding: 1rem;
+    margin-bottom: 4rem;
+  }
+  .info p {
+    margin: 0;
+  }

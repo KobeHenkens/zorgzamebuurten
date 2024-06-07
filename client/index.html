@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!--Css-->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/homepage.css">
     <!--Javascript-->
     <script type="module" src="./main.js"></script>
   </head>
@@ -17,26 +18,80 @@
     <header>
       <!--Navbar-->
       <div class="container navbarshadow">
-      <nav class="content container">
-        <a class="skiplink" href="#main">skip to main</a>
-        <img src="./images/logo.jpeg" alt="logo website" class="logo">
-        <button aria-expanded="false" class="hamburger" id="menu">
-          <span aria-hidden="true" class="icon">
-              <span></span><span></span><span></span>
-          </span>
-        <span class="sr-only">Menu</span>
-        </button>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="./posts/">Posts</a></li>
-          <li><a href="./contact/">Contact</a></li>
-          <li class="last-items"><a href="./login/">Inloggen</a></li>
-          <li><a href="./regristreer/">Registreren</a></li>
-        </ul>
-      </nav>
-    </div>
+        <nav class="content container">
+          <a class="skiplink" href="#main">skip to main</a>
+          <img src="./images/logo.jpeg" alt="logo website" class="logo">
+          <button aria-expanded="false" class="hamburger" id="menu">
+            <span aria-hidden="true" class="icon">
+                <span></span><span></span><span></span>
+            </span>
+          <span class="sr-only">Menu</span>
+          </button>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="./posts/">Posts</a></li>
+            <li><a href="./contact/">Contact</a></li>
+            <li class="last-items"><a href="./login/">Inloggen</a></li>
+            <li><a href="./regristreer/">Registreren</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main id="main"></main>
-    <footer></footer>
+    <main id="main">
+      <section class="hero container">
+        <div class="content">
+          <h1>Klusjesbuurt - Zet jouw klusjes online en help elkaar!</h1>
+          <p>
+            Onze website faciliteert vriendelijke gebaren en praktische hulp tussen buren,
+            waardoor sterke banden worden gesmeed en een gevoel van gemeenschap wordt versterkt!
+          </p>
+          <a href="#about">Meer info</a>
+        </div>
+        <figure>
+          <img src="./images/background-homepage.jpg" alt="background image website">
+        </figure>
+      </section>
+
+      <section id="about" class="about container">
+        <div class="content">
+          <h2>Wie zijn wij?</h2>
+          <p>
+            Wij zijn een online platform dat is opgericht met één doel voor ogen: 
+            buurtbewoners met elkaar verbinden door praktische hulp en ondersteuning te bieden. 
+            Of het nu gaat om het doen van boodschappen, het helpen bij klusjes of gewoon een vriendelijk gebaar, 
+            wij brengen mensen samen om elkaar te helpen. Door bij te dragen aan de gemeenschap,
+            ontstaan er niet alleen waardevolle connecties, maar ook vriendschappen die de buurt 
+            versterken en de levens van mensen verbeteren."
+          </p>
+        </div>
+        <figure>
+          <img src="./images/logo.jpeg" alt="logo zorgzame buurten">
+        </figure>
+      </section>
+
+      <section class="vragen">
+        <div class="container">
+          <h2>Heb je vragen?</h2>
+          <a href="./contact/">Contacteer ons</a>
+        </div>
+      </section>
+
+      <section class="info container">
+        <h2>Wat is een Zorgzame Buurt?</h2>
+        <p>
+          Een Zorgzame Buurt wonen mensen comfortabel in hun woning of vertrouwde buurt. 
+          Het is een buurt waar jong en oud elkaar kennen en helpen. In een zorgzame Buurt staat levenskwaliteit centraal,
+          voorzieningen en diensten zijn er voor iedereen toegankelijk. Iedereen voelt er zich goed en wordt geholpen, 
+          ongeacht de ondersteuningsbehoeften.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <!--Footer-->
+      <section class="container">
+        <p>&copy;2024 Zorgzame Buurten</p>
+        <p>All Right Reserved</p>
+      </section>
+    </footer>
   </body>
 </html>
