@@ -7,6 +7,7 @@
   --primary: #EEB38C;
   --secundary: #222;
   --bg: #ffffff;
+  --error: rgb(200,0,0);
 }
 
 body {
@@ -64,7 +65,6 @@ a:focus-visible, button:focus-visible {
 
 
 /* Navbar */
-
 nav.content {
   display: flex;
   height: 3.125rem;
@@ -100,14 +100,16 @@ nav.content ul a {
   margin-left: 2.5rem;
 }
 nav.content ul.hidden {
-  display: hidden;
+  display: none;
   animation: slideOutMenu 1s ease;
+  z-index: 1000;
 }
 nav.content ul.visible {
   display: flex;
   flex-direction: column;
   z-index: 10;
   animation: slideInMenu 1s ease;
+
 }
 nav.content li {
   position: relative;
@@ -116,6 +118,7 @@ nav.content li {
   border-bottom: 1px solid #DFDCDC;
 }
 nav.content li:hover {
+  transition: background-color 0.5s ease;
   background-color: #DFDCDC;
   border-radius: 1rem;
 }
@@ -188,18 +191,115 @@ nav.content li:nth-child(5) a::before {
   : var(--primary);
 }
 
-
-
 /* Footer */
 footer {
   margin-top: auto;
   background-color: var(--secundary);
   color: #ffffff;
-  display: flex;
   text-align: center;
 }
 
+/* Form Validatie Stijl! */ 
+  /* if there is an error */
+  .errorSummary {
+    border: 0.0625rem solid var(--error);
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  .errorSummary h2 {
+    margin-top: 0;
+  }
+
+  span.field-error {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    margin-top: 0.25em;
+    color: var(--error);
+  }
+
+
+
 /* Media queries */
+@media (min-width: 36rem) {
+  footer div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  
+}
+@media (min-width: 48rem) {
+  /* Navbar */
+
+  nav.content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav.content ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    width: auto;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  nav.content ul a {
+    margin: 0;
+  }
+  nav.content li {
+    border-bottom: none;
+    padding: 0 0.5rem;
+  }
+
+  nav.content li a::before {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  .hamburger .icon span {
+    display: none;
+  }
+  nav.content li:nth-child(1)  {
+    margin-left: 14rem;
+  }
+  nav.content ul .last-items {
+    margin-left: auto;
+  }
+  nav.content li:nth-child(4) {
+    margin-right: 0.2rem;
+  }
+  nav.content li:nth-child(4), nav.content li:nth-child(5) {
+    background-color: var(--primary);
+    border-radius: 0.625rem;
+    padding: 0.2rem 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  nav.content li:nth-child(4):hover, nav.content li:nth-child(5):hover {
+    background-color: #DFDCDC;
+  }
+}
+@media  (min-width:54.375rem){
+  nav.content li:nth-child(1)  {
+    margin-left: 17rem;
+  }
+}
+@media (min-width: 62rem) {
+  nav.content li:nth-child(1)  {
+    margin-left: 19.5rem;
+  }
+}
+@media (min-width: 75rem) {
+
+}
+@media (min-width: 87.5rem) {
+
+}
 
 /* Animaties */
 @keyframes slideInMenu {

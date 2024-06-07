@@ -1,0 +1,154 @@
+.errorSummary {
+    display: none;
+}
+.login {
+    padding: 1rem 1rem 0.2rem 1rem;
+}
+.login h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 1rem 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+form input {
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    border: 0.0625rem solid #ccc;
+    transition: border-color 0.3s ease;
+}
+form input:focus{
+    border-color: var(--primary);
+    outline: none;
+}
+form button {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.625rem;
+    padding: 0.2rem 0.5rem;
+    border: none;
+    width: 50%;
+    transition: background-color 0.3s ease;
+}
+form button:hover, button:focus{
+    background-color: #DFDCDC;
+}
+.registrerenMobile {
+    text-align: center;
+    padding: 1rem;
+}
+.registrerenMobile a{
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+.registrerenMobile a:hover {
+    color: #DFDCDC;
+}
+.registrerenDesktop {
+    display: none;
+}
+
+/* Media queries */
+@media (min-width: 36rem) {
+    .login {
+        padding: 1rem 3rem 0.2rem 3rem;
+    }
+
+}
+@media (min-width: 48rem) {
+    /* Helpers */
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }   
+    .login {
+        padding: 0rem;
+        width: 30rem;
+    }
+}
+@media (min-width: 62rem) {
+    /* Helpers */
+    .center {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        max-width: 80rem;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .container {
+        max-width: 80rem;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin-top: 0;
+        width: 60%;
+    }
+    form label, 
+    form input {
+        width: 20rem;
+    }
+    .registrerenMobile {
+        display: none;
+    }
+    .registrerenDesktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary);
+        height: 100vh;
+        width: 50%;
+        margin: 0;
+    }
+    .registrerenDesktop h2 {
+        font-size: 2rem;
+        font-family: 600;
+        margin: 2rem 0 0.5rem;
+    }
+    .registrerenDesktop p {
+        margin: 0 0 1rem;
+    }
+    .registrerenDesktop a {
+        border: 0.0625rem solid var(--secundary);
+        border-radius: 0.625rem;
+        padding: 0.3rem 2.5rem;
+        text-decoration: none;
+        color: var(--secundary);
+        transition: background-color 0.3s ease;
+    }
+    .registrerenDesktop a:hover { 
+        background-color: #DFDCDC;
+    }
+
+}
+@media (min-width: 1200px) {
+    .login {
+        width: 70%;
+    }
+    .registrerenDesktop h2 {
+        font-size: 2.5rem;
+    }
+    .registrerenDesktop p {
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 1400px) {
+    .login {
+        width: 80%;
+    }
+}

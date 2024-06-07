@@ -80,10 +80,13 @@
     border: 1px solid var(--secundary);
     padding: 0.5rem 3rem;
     border-radius: 0.625rem;
+    transition: background-color 0.3s ease;
   }
-  
+  .vragen a:hover {
+    background-color: #DFDCDC;
+  }
   /* info */
-  
+
   .info {
     padding: 1rem;
     margin-bottom: 4rem;
@@ -91,3 +94,63 @@
   .info p {
     margin: 0;
   }
+
+  /* Media queries */
+@media (min-width: 36rem) {
+  .hero .content h1 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0 0;
+  }
+  .hero .content p {
+    max-width: 30rem;
+  }
+  .about {
+    flex-direction: row;
+  }
+  .about .content p {
+    max-width: 37.5rem;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 48rem) {
+  /* Hero */
+  .hero {
+    padding: 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 4rem 0;
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+  .hero .content {
+    position: absolute;
+  }
+  .hero .content h1 {
+    font-size: 1.9rem;
+    margin: 0;
+  }
+  .hero .content p {
+    max-width: 37.5rem;
+  }
+  .hero figure {
+    margin: 0.2rem 0 0;
+  }
+  .hero figure img {
+    aspect-ratio: 16/9;
+    opacity: 0.3;
+  }
+}
+@media (min-width: 62rem) {
+
+}
+@media (min-width: 75rem) {
+
+}
+@media (min-width: 87.5rem) {
+
+}
