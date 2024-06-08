@@ -1,35 +1,36 @@
 import { initialiseerToggleNav } from "./src/hamburger.js";
 import { checkWindowSize } from "./src/hamburger.js";
-import { FormValidator } from "./src/formValidator.js";
+import { createKlusjesCard } from "./src/klusjesView.js";
+
+
+// Queryselectors
+const verwijderButton = document.querySelector("#verwijder")
+const postButton = document.querySelector("#post")
+const mijnklusjes = document.getElementById('mijnKlusjes') // test TODO remove
+
+// Test adding function
+const klusjes = {
+    userName: "Merl Stanley",
+    userTime: "Vandaag om 12:33",
+    taak: "Boodschappen Delhaize",
+    locatie: "Sint-Lievens-Houtem, 9520"
+  };
+
+if (mijnklusjes) {
+    createKlusjesCard(klusjes, mijnklusjes)
+}
+
+
+
 
 // Hamburger menu mobile menu
 initialiseerToggleNav()
 // Responsive navbar toggle
 window.addEventListener("resize", checkWindowSize)
 
-
-
-// Formvalidator LoginPagina 
-const formLogin = document.querySelector('#login');
-
-if (!formLogin) {
-    console.warn('Form is not defined')
+// Posts pagina (index.html)
+if (postButton) {
+    postButton.addEventListener("click", function() {
+        window.location.href = './klus.html'
+    })
 }
-const formValidatorLogin = new FormValidator(formLogin);
-
-formValidatorLogin.addValidator({
-    name: 'email',
-    method: field => field.value.trim().match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/),
-    message: 'Email is een verplicht veld en werd niet correct ingevuld',
-})
-formValidatorLogin.addValidator({
-    name: 'password',
-    method: (field) => field.value.trim().length > 0,
-    message: 'Wachtwoord is een verplicht veld en werd niet correct ingevuld' 
-})
-
-formLogin.addEventListener('submit', function (event) {
-    event.preventDefault()
-    console.log('Submit gelukt! Geen errors!')
-    this.reset()
-})

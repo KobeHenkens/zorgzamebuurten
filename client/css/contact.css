@@ -1,32 +1,44 @@
+
 .errorSummary {
     display: none;
 }
-.login {
+.not-resizeable {
+    resize: none;
+}
+.contact {
     padding: 1rem 1rem 0.2rem 1rem;
 }
-.login h1 {
-    font-size: 3rem;
+.contact h1 {
+    font-size: 2rem;
     font-weight: 800;
     text-align: center;
     margin: 1rem 0;
 }
+.contact p {
+    margin: 0 0 1rem;
+    text-align: center;
+}
 form {
     display: flex;
     flex-direction: column;
+    
 }
 form label {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
-form input {
+form input, textarea{
     height: 2.5rem;
     margin-bottom: 1rem;
     border: 0.0625rem solid #ccc;
     transition: border-color 0.3s ease;
 }
-form input:focus{
+form input:focus, textarea:focus{
     border-color: var(--primary);
     outline: none;
+}
+form textarea {
+    height: 5rem;
 }
 form button {
     margin: 0 auto;
@@ -41,24 +53,64 @@ form button {
 form button:hover, button:focus{
     background-color: #DFDCDC;
 }
-.registrerenMobile {
-    text-align: center;
+.info {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
 }
-.registrerenMobile a{
-    color: var(--primary);
-    transition: color 0.3s ease;
+.info h2 {
+    margin: 2rem 0 1rem;
 }
-.registrerenMobile a:hover {
-    color: #DFDCDC;
+.info p {
+    font-size: 100%;
+    margin: 0 0 0.5rem;
 }
-.registrerenDesktop {
-    display: none;
+.info p:first-of-type {
+    position: relative;
+    padding-left: 2rem;
+}
+.info p:first-of-type::before {
+    content: "";
+    background: url(../images/email.png) no-repeat center center; /* Pas het pad naar je afbeelding aan */
+    background-size: contain;
+    width: 30px; /* Pas de breedte aan naar de grootte van je afbeelding */
+    height: 30px; /* Pas de hoogte aan naar de grootte van je afbeelding */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.info p:nth-of-type(2) {
+    position: relative;
+    padding-left: 2rem;
+}
+.info p:nth-of-type(2)::before {
+    content: "";
+    background: url(../images/telefoon.png) no-repeat center center; /* Pas het pad naar je afbeelding aan */
+    background-size: contain;
+    width: 30px; /* Pas de breedte aan naar de grootte van je afbeelding */
+    height: 30px; /* Pas de hoogte aan naar de grootte van je afbeelding */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Form succesvol */
+.succes {
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    font-weight: 900;
+    font-size: 4rem;
 }
 
 /* Media queries */
 @media (min-width: 36rem) {
-    .login {
+    .contact {
         padding: 1rem 3rem 0.2rem 3rem;
     }
 
@@ -70,7 +122,7 @@ form button:hover, button:focus{
         flex-direction: column;
         justify-content: center;
     }   
-    .login {
+    .contact {
         padding: 0rem;
         width: 30rem;
     }
@@ -92,7 +144,7 @@ form button:hover, button:focus{
         max-width: 80rem;
     }
 
-    .login {
+    .contact {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -102,13 +154,11 @@ form button:hover, button:focus{
         width: 60%;
     }
     form label, 
-    form input {
+    form input,
+    textarea {
         width: 20rem;
     }
-    .registrerenMobile {
-        display: none;
-    }
-    .registrerenDesktop {
+    .info {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -118,43 +168,33 @@ form button:hover, button:focus{
         width: 50%;
         margin: 0;
     }
-    .registrerenDesktop h2 {
+    .info h2 {
         font-size: 2rem;
         font-weight: 600;
         margin: 2rem 0 0.5rem;
     }
-    .registrerenDesktop p {
+    .info p {
         margin: 0 0 1rem;
     }
-    .registrerenDesktop a {
-        border: 0.0625rem solid var(--secundary);
-        border-radius: 0.625rem;
-        padding: 0.3rem 2.5rem;
-        text-decoration: none;
-        color: var(--secundary);
-        transition: background-color 0.3s ease;
-    }
-    .registrerenDesktop a:hover { 
-        background-color: #DFDCDC;
-    }
+
 
 }
 @media (min-width: 75rem) {
     nav.content li:nth-child(1)  {
         margin-left: 28rem;
       }
-    .login {
+    .contact {
         width: 70%;
     }
-    .registrerenDesktop h2 {
+    .info h2 {
         font-size: 2.5rem;
     }
-    .registrerenDesktop p {
+    .info p {
         font-size: 1.5rem;
     }
 }
 @media (min-width: 1400px) {
-    .login {
+    .contact {
         width: 80%;
     }
 }

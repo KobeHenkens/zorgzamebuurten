@@ -75,6 +75,9 @@ button:focus {
     }
 }
 @media (min-width: 62rem) {
+    nav.content li:nth-child(1)  {
+        margin-left: 24rem;
+      }
     .center {
         display: flex;
         flex-direction: row;
@@ -115,7 +118,7 @@ button:focus {
     }
     .inloggenDesktop h2 {
         font-size: 2rem;
-        font-family: 600;
+        font-weight: 600;
         margin: 2rem 0 0.5rem;
     }
     .inloggenDesktop p {
@@ -133,7 +136,10 @@ button:focus {
         background-color: #DFDCDC;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
+    nav.content li:nth-child(1)  {
+        margin-left: 28rem;
+      }
     .registreer {
         width: 70%;
     }
@@ -144,7 +150,7 @@ button:focus {
         font-size: 1.5rem;
     }
 }
-@media (min-width: 1400px) {
+@media (min-width: 87.5rem) {
     .registreer {
         width: 80%;
     }

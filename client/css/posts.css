@@ -1,0 +1,245 @@
+.postsbalk {
+    padding: 1rem;
+}
+
+.optiebalk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    height: 13rem;
+}
+.optiebalk .content {
+    display: flex; 
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.optiebalk div:last-child {
+    order: -1;
+}
+.optiebalk .profile-container {
+    width: 8rem;           
+    height: 8rem;          
+    border-radius: 50%;     
+    overflow: hidden;        
+    display: flex;           
+    justify-content: center; 
+    align-items: center;     
+    background-color: #ccc; 
+    margin-left: 1rem;
+}
+.optiebalk img {
+    width: 100%;             
+    height: 100%;            
+    object-fit: cover;       
+    display: flex;         
+    margin-bottom: 1rem;
+}
+
+.optiebalk button {
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: var(--primary);
+    border-radius: 0.625rem;
+    padding: 0.2rem 0.5rem;
+    border: none;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+.optiebalk button:hover, form button:focus{
+    background-color: #DFDCDC;
+}
+/* Zoek / Filter Opties */
+.zoek-select-filter select,
+.zoek-select-filter input {
+    cursor: pointer;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    border: 0.0625rem solid #ccc;
+    transition: border-color 0.3s ease;
+}
+.zoek-select-filter select,
+.zoek-select-filter input:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+/* Posts */
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.posts {
+    padding: 1rem;
+}
+.posts h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+ul#mijnKlusjes {
+    padding: 0;
+}
+ul#mijnKlusjes li {
+   list-style: none;
+}
+.klusjesCard {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.225rem 0.5rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    width: 100%;
+    animation: fadeIn .5s ease-in-out forwards;
+  }
+
+  .klusjesCard:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  }
+  .klusjesCard:active {
+
+    background-color: #eee;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  }
+.klusjesCard .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.625rem;
+  }
+
+.klusjesCard .user-image {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0.9375rem;
+  }
+
+.klusjesCard .user-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.klusjesCard .user-name {
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+
+.klusjesCard .user-time {
+    font-size: 0.875rem;
+    color: #666;
+  }
+.klusjesCard .taak {
+    font-weight: 600;
+  }
+.klusjesCard h3, 
+.klusjesCard p {
+    margin: 0;
+  }
+
+
+
+/* Media queries */
+@media (min-width: 36rem) {
+    .optiebalk button {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    .posts h2 {
+        font-size: 1.4rem;
+    }
+    .posts {
+        width: 20rem;
+    }
+
+    
+}
+@media (min-width: 48rem) {
+
+    .optiebalk {
+        flex-direction: row;
+        justify-content: space-between;
+        
+        background-color: var(--gray);
+        width: 100%;
+        height: 6.25rem;
+        border-top: 0.3125rem solid var(--primary);
+        margin-top: 4rem;
+    }
+    .optiebalk .profile-container {
+        width:5.4375rem;
+        height: 5.4375rem;
+    }
+
+    /* Zoek / Filter Opties */
+    .zoek-select-filter select,
+    .zoek-select-filter input {
+        width: 18rem;
+    }
+
+    .posts {
+        width: 40rem;
+    }
+    .klusjesCard{
+        flex-direction: row;
+      }
+    .klusjesCard .user-info {
+        margin-bottom: 0;
+    }
+
+}
+@media (min-width: 62rem) {
+    nav.content li:nth-child(1)  {
+        margin-left: 24rem;
+      }
+
+    .container {
+        max-width: 80rem;
+    }
+    
+    /* Zoek / Filter Opties */
+    .zoek-select-filter select,
+    .zoek-select-filter input {
+        width: 22rem;
+    }
+
+    .posts {
+        width: 50rem;
+    }
+    .posts h2 {
+        font-size: 2rem;
+    }
+    .klusjesCard .info {
+        display: flex;
+        gap: 6rem;
+        
+    }
+
+}
+@media (min-width: 75rem) {
+    nav.content li:nth-child(1)  {
+        margin-left: 28rem;
+      }
+
+}
+
+
+/* Animaties */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        scale: .5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}

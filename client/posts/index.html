@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zorgzame Buurten - Posts</title>
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!--Css-->
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/posts.css">
+        <!--Javascript-->
+        <script type="module" src="../main.js"></script>
+      </head>
+    <body>
+        <header>
+            <!--Navbar-->
+            <div class="container navbarshadow">
+              <nav class="content container">
+                <a class="skiplink" href="#main">skip to main</a>
+                <img src="../images/logo.jpeg" alt="logo website" class="logo">
+                <button aria-expanded="false" class="hamburger" id="menu">
+                  <span aria-hidden="true" class="icon">
+                      <span></span><span></span><span></span>
+                  </span>
+                <span class="sr-only">Menu</span>
+                </button>
+                <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="">Posts</a></li>
+                  <li><a href="../contact/">Contact</a></li>
+                  <li class="last-items"><a href="../login/">Inloggen</a></li>
+                  <li><a href="../regristreer/">Registreren</a></li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+          <main id="main">
+            <h1 class="sr-only">Posts Pagina</h1>
+            <section class="postsbalk container">
+                <div class="optiebalk">
+                    <div class="content">
+                        <button id="verwijder">Verwijder een klus</button>
+                        <button id="post">Post een klus</button>
+                    </div>
+                    <div class="profile-container">
+                        <img src="../images/profiellogo.webp" alt="logo profiel">
+                    </div>
+                </div>
+              </section>
+
+              <div class="center">
+                <section class="zoek-select-filter">
+                    <input type="text" id="searchInput" placeholder="Zoek...">
+                    <select id="filterSelect">
+                        <option value="dateOpl">Datum: oplopend</option>
+                        <option value="dateAfl">Datum: aflopend</option>
+                    </select>
+                </section>
+
+                <section class="posts container">
+                    <div class="mijn-klusjes">
+                        <h2>Jouw geposte klussen</h2>
+                        <ul id="mijnKlusjes">
+
+                            <!--Cards worden dynamisch toegevoegd-->
+                            <li>
+                                <div class="klusjesCard">
+                                    <div class="user-info">
+                                        <div class="user-image">
+                                        <img src="../images/profiellogo.webp" alt="Gebruikers profiel foto">
+                                        </div>
+                                        <div>
+                                        <h3 class="user-name">Merl Stanley</h3>
+                                        <p class="user-time">Vandaag om 12:33</p>
+                                        </div>
+                                    </div>
+                                    <div class="info">
+                                        <h3 class="taak">Boodschappen Delhaize</h3>
+                                        <p class="locatie">Sint-Lievens-Houtem, 9520</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="progress-klusjes">
+                        <h2>Volg je geaccepteerde taken</h2>
+                        <ul id="progressKlusjes">
+
+                        </ul>
+                    </div>
+
+                    <div class="beschikbare-klusjes">
+                        <h2>Beschikbare klusjes</h2>
+                        <ul id="beschikbareKlusjes">
+
+                        </ul>
+                    </div>
+                </section>
+            </div>
+          </main>
+          <footer>
+            <!--Footer-->
+            <div class="container">
+              <p>&copy;2024 Zorgzame Buurten</p>
+              <p>All Right Reserved</p>
+            </div>
+          </footer>
+    </body>
+</html>

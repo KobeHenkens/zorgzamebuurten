@@ -1,0 +1,136 @@
+.optiebalk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    height: 13rem;
+}
+.optiebalk .content {
+    display: flex; 
+    gap: 1rem;
+    padding: 1rem;
+}
+.optiebalk div:last-child {
+    order: -1;
+}
+.optiebalk .profile-container {
+    width: 8rem;           
+    height: 8rem;          
+    border-radius: 50%;     
+    overflow: hidden;        
+    display: flex;           
+    justify-content: center; 
+    align-items: center;     
+    background-color: #ccc; 
+    margin-left: 1rem;
+}
+.optiebalk img {
+    width: 100%;             
+    height: 100%;            
+    object-fit: cover;       
+    display: flex;         
+    margin-bottom: 1rem;
+}
+
+.errorSummary {
+    display: none;
+}
+.not-resizeable {
+    resize: none;
+}
+.klus {
+    padding: 1rem 1rem 0.2rem 1rem;
+    width: 100%;
+}
+
+.size {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form label {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+form input, textarea{
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    border: 0.0625rem solid #ccc;
+    transition: border-color 0.3s ease;
+}
+form input:focus, textarea:focus{
+    border-color: var(--primary);
+    outline: none;
+}
+form textarea {
+    height: 5rem;
+}
+form button {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.625rem;
+    padding: 0.2rem 0.5rem;
+    border: none;
+    width: 50%;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+form button:hover, form button:focus{
+    background-color: #DFDCDC;
+}
+
+
+
+/* Media queries */
+@media (min-width: 36rem) {
+    .klus {
+        padding: 1rem 3rem 0.2rem 3rem;
+    }
+}
+@media (min-width: 48rem) {
+    .klus {
+        padding: 0rem;
+        width: 90%;
+    }
+    .optiebalk {
+        flex-direction: row;
+        justify-content: space-between;
+        
+        background-color: var(--gray);
+        width: 100%;
+        height: 6.25rem;
+        border-top: 0.3125rem solid var(--primary);
+        margin-top: 4rem;
+    }
+    .optiebalk .profile-container {
+        width:5.4375rem;
+        height: 5.4375rem;
+    }
+
+}
+@media (min-width: 62rem) {
+    nav.content li:nth-child(1)  {
+        margin-left: 24rem;
+      }
+
+    .container {
+        max-width: 80rem;
+    }
+    form label, 
+    form input,
+    textarea {
+        width: 80%;
+    }
+    div.size {
+        display: flex;
+        align-items: center;
+    }
+
+}
+@media (min-width: 75rem) {
+    nav.content li:nth-child(1)  {
+        margin-left: 28rem;
+      }
+
+}
